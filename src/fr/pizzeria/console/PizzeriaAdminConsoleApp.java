@@ -17,20 +17,12 @@ public class PizzeriaAdminConsoleApp {
 		Pizza f = new Pizza (5 ,"SAV" , "La Savoyarde" , 13.00) ;
 		Pizza g = new Pizza (6 ,"ORI" , "L'Orientale" , 13.50) ;
 		Pizza h = new Pizza (7 ,"IND" , "L'Indienne" , 14.00) ;
-		System.out.println(a.code + " -> " + a.libelle + " ( " + a.prix + " )");
-		System.out.println(b.code + " -> " + b.libelle + " ( " + b.prix + " )");
-		System.out.println(c.code + " -> " + c.libelle + " ( " + c.prix + " )");
-		System.out.println(d.code + " -> " + d.libelle + " ( " + d.prix + " )");
-		System.out.println(e.code + " -> " + e.libelle + " ( " + e.prix + " )");
-		System.out.println(f.code + " -> " + f.libelle + " ( " + f.prix + " )");
-		System.out.println(g.code + " -> " + g.libelle + " ( " + g.prix + " )");
-		System.out.println(h.code + " -> " + h.libelle + " ( " + h.prix + " )");
 		
 		
 		Scanner questionUser = new Scanner(System.in);
 		//int nombre_1 = questionUser.nextInt();
 		
-		System.out.println("***** Pizzeria Administration *****  ");
+		System.out.println("***** Pizzeria Administration *****  " );
 		System.out.println("1. Lister les pizzas  ");
 		System.out.println("2. Ajouter une nouvelle pizza  ");
 		System.out.println("3. Mettre à jour une pizza  ");
@@ -45,6 +37,17 @@ public class PizzeriaAdminConsoleApp {
 		
 			if (user_choice == 1) {
 				System.out.println("Liste des pizzas  ");
+				
+				
+				System.out.println(a.code + " -> " + a.libelle + " ( " + a.prix + " )");
+				System.out.println(b.code + " -> " + b.libelle + " ( " + b.prix + " )");
+				System.out.println(c.code + " -> " + c.libelle + " ( " + c.prix + " )");
+				System.out.println(d.code + " -> " + d.libelle + " ( " + d.prix + " )");
+				System.out.println(e.code + " -> " + e.libelle + " ( " + e.prix + " )");
+				System.out.println(f.code + " -> " + f.libelle + " ( " + f.prix + " )");
+				System.out.println(g.code + " -> " + g.libelle + " ( " + g.prix + " )");
+				System.out.println(h.code + " -> " + h.libelle + " ( " + h.prix + " )");
+				
 			} else if ( user_choice == 2) {
 				System.out.println("Ajout d'une nouvelle pizza  ");
 			} else if ( user_choice == 3) {

@@ -32,7 +32,7 @@ public class PizzeriaAdminConsoleApp {
 			} else if ( user_choice == 4) {
 				System.out.println("Suppression d'une pizza ");
 			} else {
-				System.out.println("Je n'ai pas compris, Veuillez recommencer ");
+				System.out.println("Je n'ai pas compris, Veuillez recommencer1 ");
 			}
 			
 			System.out.println("***** Pizzeria Administration *****  ");

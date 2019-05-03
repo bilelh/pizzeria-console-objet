@@ -8,6 +8,7 @@ public class Pizza {
 	double prix ;
 	
 	public Pizza (String code , String libelle , double prix) {
+		this.id += 1 ;
 		this.code = code ;
 		this.libelle = libelle ;
 		this.prix = prix ;

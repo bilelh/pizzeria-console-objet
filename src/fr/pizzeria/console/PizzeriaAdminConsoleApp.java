@@ -11,14 +11,14 @@ public class PizzeriaAdminConsoleApp {
 		
 		Pizza [] listPizza = new Pizza[8] ;
 		
-		listPizza [0] = new Pizza (0 ,"PEP" , "pépéroni" , 12.50) ;
-		listPizza [1] = new Pizza (1 ,"MAR" , "Margherita" , 14.00) ;
-		listPizza [2] = new Pizza (2 ,"REIN" , "La Reine" , 11.50) ;
-		listPizza [3] = new Pizza (3, "FRC" , "La 4 Fromage" , 12.00) ;
-		listPizza [4] = new Pizza (4 ,"CAN" , "La Cannibale" , 12.50) ;
-		listPizza [5] = new Pizza (5 ,"SAV" , "La Savoyarde" , 13.00) ;
-		listPizza [6] = new Pizza (6 ,"ORI" , "L'Orientale" , 13.50) ;
-		listPizza [7] = new Pizza (7 ,"IND" , "L'Indienne" , 14.00) ;
+		listPizza [0] = new Pizza ("PEP" , "pépéroni" , 12.50) ;
+		listPizza [1] = new Pizza ("MAR" , "Margherita" , 14.00) ;
+		listPizza [2] = new Pizza ("REIN" , "La Reine" , 11.50) ;
+		listPizza [3] = new Pizza ("FRC" , "La 4 Fromage" , 12.00) ;
+		listPizza [4] = new Pizza ("CAN" , "La Cannibale" , 12.50) ;
+		listPizza [5] = new Pizza ("SAV" , "La Savoyarde" , 13.00) ;
+		listPizza [6] = new Pizza ("ORI" , "L'Orientale" , 13.50) ;
+		listPizza [7] = new Pizza ("IND" , "L'Indienne" , 14.00) ;
 		
 		
 		
@@ -70,6 +70,7 @@ public class PizzeriaAdminConsoleApp {
 				
 			} else if ( user_choice == 3) {
 				System.out.println("Mise à jour d'une pizza  ");
+				
 			} else if ( user_choice == 4) {
 				System.out.println("Suppression d'une pizza ");
 			} else {

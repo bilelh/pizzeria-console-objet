@@ -9,7 +9,7 @@ public class Pizza {
 	public static int id_pizza = 0 ;
 	
 	public Pizza (String code , String libelle , double prix) {
-		this.id += id_pizza++ ;
+		this.id = id_pizza++ ;
 		this.code = code ;
 		this.libelle = libelle ;
 		this.prix = prix ;
@@ -17,6 +17,9 @@ public class Pizza {
 	
 	public Pizza (int id , String code , String libelle , double prix) {
 		this.id = id ;
+		if (id > id_pizza) {
+			id_pizza = id;
+		}
 		this.code = code ;
 		this.libelle = libelle ;
 		this.prix = prix ;

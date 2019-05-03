@@ -6,9 +6,10 @@ public class Pizza {
 	public String code ;
 	public String libelle ;
 	public double prix ;
+	public static int id_pizza = 0 ;
 	
 	public Pizza (String code , String libelle , double prix) {
-		this.id += 1 ;
+		this.id += id_pizza++ ;
 		this.code = code ;
 		this.libelle = libelle ;
 		this.prix = prix ;

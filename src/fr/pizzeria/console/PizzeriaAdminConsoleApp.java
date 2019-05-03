@@ -9,14 +9,17 @@ public class PizzeriaAdminConsoleApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Pizza a = new Pizza (0 ,"PEP" , "pépéroni" , 12.50) ;
-		Pizza b = new Pizza (1 ,"MAR" , "Margherita" , 14.00) ;
-		Pizza c = new Pizza (2 ,"REIN" , "La Reine" , 11.50) ;
-		Pizza d = new Pizza (3, "FRC" , "La 4 Fromage" , 12.00) ;
-		Pizza e = new Pizza (4 ,"CAN" , "La Cannibale" , 12.50) ;
-		Pizza f = new Pizza (5 ,"SAV" , "La Savoyarde" , 13.00) ;
-		Pizza g = new Pizza (6 ,"ORI" , "L'Orientale" , 13.50) ;
-		Pizza h = new Pizza (7 ,"IND" , "L'Indienne" , 14.00) ;
+		Pizza [] listPizza = new Pizza[8] ;
+		
+		listPizza [0] = new Pizza (0 ,"PEP" , "pépéroni" , 12.50) ;
+		listPizza [1] = new Pizza (1 ,"MAR" , "Margherita" , 14.00) ;
+		listPizza [2] = new Pizza (2 ,"REIN" , "La Reine" , 11.50) ;
+		listPizza [3] = new Pizza (3, "FRC" , "La 4 Fromage" , 12.00) ;
+		listPizza [4] = new Pizza (4 ,"CAN" , "La Cannibale" , 12.50) ;
+		listPizza [5] = new Pizza (5 ,"SAV" , "La Savoyarde" , 13.00) ;
+		listPizza [6] = new Pizza (6 ,"ORI" , "L'Orientale" , 13.50) ;
+		listPizza [7] = new Pizza (7 ,"IND" , "L'Indienne" , 14.00) ;
+		
 		
 		
 		Scanner questionUser = new Scanner(System.in);
@@ -38,18 +41,22 @@ public class PizzeriaAdminConsoleApp {
 			if (user_choice == 1) {
 				System.out.println("Liste des pizzas  ");
 				
+				for ( int i = 0 ; i < listPizza.length ; i++) {
+				System.out.println(listPizza [i].id + " _ " + listPizza [i].code + " -> " + listPizza [i].libelle + " ( " + listPizza [i].prix + " )");
 				
-				System.out.println(a.code + " -> " + a.libelle + " ( " + a.prix + " )");
-				System.out.println(b.code + " -> " + b.libelle + " ( " + b.prix + " )");
-				System.out.println(c.code + " -> " + c.libelle + " ( " + c.prix + " )");
-				System.out.println(d.code + " -> " + d.libelle + " ( " + d.prix + " )");
-				System.out.println(e.code + " -> " + e.libelle + " ( " + e.prix + " )");
-				System.out.println(f.code + " -> " + f.libelle + " ( " + f.prix + " )");
-				System.out.println(g.code + " -> " + g.libelle + " ( " + g.prix + " )");
-				System.out.println(h.code + " -> " + h.libelle + " ( " + h.prix + " )");
-				
+				}
 			} else if ( user_choice == 2) {
 				System.out.println("Ajout d'une nouvelle pizza  ");
+				
+				System.out.println("Veuillez saisir le code:  ");
+				String newCode = questionUser.nextLine();
+				
+				System.out.println("Veuillez saisir le nom (sans espace):  ");
+				String newLibelle = questionUser.nextLine();
+				
+				System.out.println("Veuillez saisir le prix:  ");
+				double newPrix = questionUser.nextDouble();
+				
 			} else if ( user_choice == 3) {
 				System.out.println("Mise à jour d'une pizza  ");
 			} else if ( user_choice == 4) {

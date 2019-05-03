@@ -55,8 +55,18 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("Veuillez saisir le nom (sans espace):  ");
 				String newLibelle = questionUser.nextLine();
 				
-				System.out.println("Veuillez saisir le prix:  ");
+				System.out.println("Veuillez saisir le prix (avec une virgule):  ");
 				double newPrix = questionUser.nextDouble();
+				
+				Pizza [] newListPizza = new Pizza[listPizza.length + 1] ;
+				
+				for (int i = 0 ; i<listPizza.length ; i++) {
+					newListPizza[i] = listPizza[i];
+				}
+				
+				newListPizza [newListPizza.length - 1] = new Pizza (newCode , newLibelle , newPrix) ;
+				listPizza  = newListPizza  ;
+				
 				
 			} else if ( user_choice == 3) {
 				System.out.println("Mise à jour d'une pizza  ");

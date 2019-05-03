@@ -42,7 +42,7 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("Liste des pizzas  ");
 				
 				for ( int i = 0 ; i < listPizza.length ; i++) {
-				System.out.println(listPizza [i].id + " _ " + listPizza [i].code + " -> " + listPizza [i].libelle + " ( " + listPizza [i].prix + " )");
+				System.out.println(listPizza [i].id + " _ " + listPizza [i].code + " -> " + listPizza [i].libelle + " ( " + String.format("%.2f" , listPizza [i].prix) + "€ )");
 				
 				}
 			} else if ( user_choice == 2) {
@@ -70,6 +70,38 @@ public class PizzeriaAdminConsoleApp {
 				
 			} else if ( user_choice == 3) {
 				System.out.println("Mise à jour d'une pizza  ");
+				
+				System.out.println("Veuillez choisir le code de la pizza à modifier:  ");
+				questionUser.nextLine();
+				String modif_code = questionUser.nextLine();
+				
+				boolean modif_reussite = false ;
+				
+				for ( int i = 0 ; i < listPizza.length ; i++ ) {
+					if (listPizza [i].code.compareTo(modif_code) == 0) { //pour comparer des String
+						
+						System.out.println("Veuillez saisir le nouveau code:  ");
+						String newCode = questionUser.nextLine();
+						
+						System.out.println("Veuillez saisir le nouveau nom (sans espace):  ");
+						String newLibelle = questionUser.nextLine();
+						
+						System.out.println("Veuillez saisir le nouveau prix (avec une virgule):  ");
+						double newPrix = questionUser.nextDouble();
+						
+						listPizza [i] = new Pizza(i, newCode , newLibelle , newPrix) ;
+						
+						modif_reussite = true ;
+						
+				
+					}
+				}
+				if (modif_reussite) {
+					System.out.println("La modification a été prise en compte");
+				} else {
+					System.out.println("Le code n'existe pas");
+				}
+				
 				
 			} else if ( user_choice == 4) {
 				System.out.println("Suppression d'une pizza ");

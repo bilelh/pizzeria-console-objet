@@ -105,6 +105,38 @@ public class PizzeriaAdminConsoleApp {
 				
 			} else if ( user_choice == 4) {
 				System.out.println("Suppression d'une pizza ");
+				
+				
+				System.out.println("Veuillez choisir le code de la pizza à supprimer:  ");
+				questionUser.nextLine();
+				String suppr_code = questionUser.nextLine();
+				
+				boolean suppr_reussite = false ;
+				
+				for ( int i = 0 ; i < listPizza.length ; i++ ) {
+					if (listPizza [i].code.compareTo(suppr_code) == 0) { //pour comparer des String
+						
+						
+						for (int j = i ; j < listPizza.length - 1 ; j++) {
+							
+							listPizza[j] = listPizza[j+1] ;
+						
+						}
+						
+						listPizza[listPizza.length - 1] = null ;
+						
+						suppr_reussite = true ;
+						
+				
+					}
+				}
+				if (suppr_reussite) {
+					System.out.println("La modification a été prise en compte");
+				} else {
+					System.out.println("Le code n'existe pas");
+				}
+				
+				
 			} else {
 				System.out.println("Je n'ai pas compris, Veuillez recommencer1 ");
 			}

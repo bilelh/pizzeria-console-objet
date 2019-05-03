@@ -49,6 +49,7 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("Ajout d'une nouvelle pizza  ");
 				
 				System.out.println("Veuillez saisir le code:  ");
+				questionUser.nextLine();
 				String newCode = questionUser.nextLine();
 				
 				System.out.println("Veuillez saisir le nom (sans espace):  ");

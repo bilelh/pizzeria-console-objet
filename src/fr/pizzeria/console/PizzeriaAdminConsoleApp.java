@@ -31,7 +31,9 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("Mise à jour d'une pizza  ");
 			} else if ( user_choice == 4) {
 				System.out.println("Suppression d'une pizza ");
-			} 
+			} else {
+				System.out.println("Je n'ai pas compris, Veuillez recommencer ");
+			}
 			
 			System.out.println("***** Pizzeria Administration *****  ");
 			System.out.println("1. Lister les pizzas  ");

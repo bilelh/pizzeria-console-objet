@@ -42,7 +42,8 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("Liste des pizzas  ");
 				
 				for ( int i = 0 ; i < listPizza.length ; i++) {
-				System.out.println(listPizza [i].id + " _ " + listPizza [i].code + " -> " + listPizza [i].libelle + " ( " + String.format("%.2f" , listPizza [i].prix) + "€ )");
+					
+					System.out.println(listPizza [i].id + " _ " + listPizza [i].code + " -> " + listPizza [i].libelle + " ( " + String.format("%.2f" , listPizza [i].prix) + "€ )");
 				
 				}
 			} else if ( user_choice == 2) {
@@ -116,14 +117,20 @@ public class PizzeriaAdminConsoleApp {
 				for ( int i = 0 ; i < listPizza.length ; i++ ) {
 					if (listPizza [i].code.compareTo(suppr_code) == 0) { //pour comparer des String
 						
+						Pizza [] newListPizza = new Pizza[listPizza.length -1] ;
 						
 						for (int j = i ; j < listPizza.length - 1 ; j++) {
 							
 							listPizza[j] = listPizza[j+1] ;
 						
 						}
+						for (int j = 0 ; j < newListPizza.length ; j++) {
+							
+							newListPizza[j] = listPizza[j] ;
 						
-						listPizza[listPizza.length - 1] = null ;
+						}
+						
+						listPizza  = newListPizza  ;
 						
 						suppr_reussite = true ;
 						

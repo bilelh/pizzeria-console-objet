@@ -11,6 +11,7 @@ public class PizzeriaAdminConsoleApp {
 		
 		Pizza [] listPizza = new Pizza[8] ;
 		
+							// PREMIERE DE PIZZA ORIGINALE
 		listPizza [0] = new Pizza ("PEP" , "pépéroni" , 12.50) ;
 		listPizza [1] = new Pizza ("MAR" , "Margherita" , 14.00) ;
 		listPizza [2] = new Pizza ("REIN" , "La Reine" , 11.50) ;
@@ -20,11 +21,10 @@ public class PizzeriaAdminConsoleApp {
 		listPizza [6] = new Pizza ("ORI" , "L'Orientale" , 13.50) ;
 		listPizza [7] = new Pizza ("IND" , "L'Indienne" , 14.00) ;
 		
-		
-		
+							// SCANNER QUI PERMET DE RECUPERER LA SAISIE CLAVIER
 		Scanner questionUser = new Scanner(System.in);
-		//int nombre_1 = questionUser.nextInt();
-		
+
+							// AFFICHAGE DE LA LISTE DES OPTIONS
 		System.out.println("***** Pizzeria Administration *****  " );
 		System.out.println("1. Lister les pizzas  ");
 		System.out.println("2. Ajouter une nouvelle pizza  ");
@@ -37,8 +37,8 @@ public class PizzeriaAdminConsoleApp {
 		
 		while (user_choice != 99) {
 		
-		
-			if (user_choice == 1) {
+							// CHOIX 1. AFFICHAGE DE LA LISTE DE PIZZAS
+			if (user_choice == 1) {     
 				System.out.println("Liste des pizzas  ");
 				
 				for ( int i = 0 ; i < listPizza.length ; i++) {
@@ -46,7 +46,9 @@ public class PizzeriaAdminConsoleApp {
 					System.out.println(listPizza [i].id + " _ " + listPizza [i].code + " -> " + listPizza [i].libelle + " ( " + String.format("%.2f" , listPizza [i].prix) + "€ )");
 				
 				}
-			} else if ( user_choice == 2) {
+							
+							// CHOIX 2. AJOUT D'UNE PIZZA
+			} else if ( user_choice == 2) { 
 				System.out.println("Ajout d'une nouvelle pizza  ");
 				
 				System.out.println("Veuillez saisir le code:  ");
@@ -68,7 +70,7 @@ public class PizzeriaAdminConsoleApp {
 				newListPizza [newListPizza.length - 1] = new Pizza (newCode , newLibelle , newPrix) ;
 				listPizza  = newListPizza  ;
 				
-				
+							// CHOIX 3. MODIFICATION D'UNE PIZZA
 			} else if ( user_choice == 3) {
 				System.out.println("Mise à jour d'une pizza  ");
 				
@@ -103,7 +105,7 @@ public class PizzeriaAdminConsoleApp {
 					System.out.println("Le code n'existe pas");
 				}
 				
-				
+							// CHOIX 4. SUPPRESSION D'UNE PIZZA
 			} else if ( user_choice == 4) {
 				System.out.println("Suppression d'une pizza ");
 				
@@ -133,21 +135,27 @@ public class PizzeriaAdminConsoleApp {
 						listPizza  = newListPizza  ;
 						
 						suppr_reussite = true ;
-						
-				
+					
 					}
 				}
 				if (suppr_reussite) {
+					
 					System.out.println("La modification a été prise en compte");
+					
 				} else {
+					
 					System.out.println("Le code n'existe pas");
+					
 				}
 				
-				
+							// MESSAGE POUR LE CAS OU L'OPTION SAISIE N'EST PAS DISPONIBLE
 			} else {
-				System.out.println("Je n'ai pas compris, Veuillez recommencer1 ");
+				
+				System.out.println("Je n'ai pas compris, Veuillez recommencer ");
+				
 			}
 			
+							// AFFICHAGE DE LA LISTE DES OPTIONS 
 			System.out.println("***** Pizzeria Administration *****  ");
 			System.out.println("1. Lister les pizzas  ");
 			System.out.println("2. Ajouter une nouvelle pizza  ");
@@ -158,12 +166,11 @@ public class PizzeriaAdminConsoleApp {
 			System.out.println("Veuillez faire votre choix");
 			user_choice = questionUser.nextInt();
 			
-			
-		
 		}
+		
+							// MESSAGE DE FIN POUR LE CHOIX 99.
 		System.out.println("Aurevoir :(  ");
 		
-
 	}
 
 }

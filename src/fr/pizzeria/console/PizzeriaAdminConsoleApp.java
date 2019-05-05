@@ -69,6 +69,8 @@ public class PizzeriaAdminConsoleApp {
 				
 				newListPizza [newListPizza.length - 1] = new Pizza (newCode , newLibelle , newPrix) ;
 				listPizza  = newListPizza  ;
+				listPizza[listPizza.length-1].id = listPizza.length-1 ;
+				
 				
 							// CHOIX 3. MODIFICATION D'UNE PIZZA
 			} else if ( user_choice == 3) {
@@ -124,6 +126,7 @@ public class PizzeriaAdminConsoleApp {
 						for (int j = i ; j < listPizza.length - 1 ; j++) {
 							
 							listPizza[j] = listPizza[j+1] ;
+							listPizza[j].id = listPizza[j+1].id -1 ;
 						
 						}
 						for (int j = 0 ; j < newListPizza.length ; j++) {
